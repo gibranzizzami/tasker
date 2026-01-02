@@ -49,11 +49,12 @@ contoh:
 ```
 terminalizer record rehan
 ```
+**Nama rehan ganti sesuai kebutuhan**
 
 **nanti akan mucul tab cmd baru nah pas munculnya tab baru itu sedang merekam prompt kalian**
 
 
-### 3. Mengakhiri Record Terminalizer
+### 3. Mengakhiri Record Terminalizer dan render hasilnya
 
 ketik 
 
@@ -61,9 +62,13 @@ ketik
 exit
 ```
 
+```
+terminalizer render rehan
+```
+
 <img width="1343" height="745" alt="C__Windows_system32_cmd exe  - _node_   _C__Users_rehan_AppData_Roaming_npm__node_modules_terminalizer_bin_app js_ render rehan 02_01_2026 04_17_24" src="https://github.com/user-attachments/assets/f742b884-f1ef-4571-990e-5e3604e7165a" />
 
-### 4. Render hasilnya
+### 4. Hasilnya
 
 ![render1767302129918](https://github.com/user-attachments/assets/1e2a7b92-8ff6-4281-a496-e9dfa278539b)
 
