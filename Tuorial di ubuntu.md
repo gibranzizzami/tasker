@@ -49,7 +49,7 @@ contoh:
 ```
 terminalizer record tester
 ```
-**Nama rehan ganti sesuai kebutuhan**
+**Nama tester ganti sesuai kebutuhan**
 
 **nanti akan mucul tab cmd baru nah pas munculnya tab baru itu sedang merekam prompt kalian**
 
