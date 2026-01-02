@@ -42,8 +42,6 @@ Kalo muncul hasilnya, lanjut step 2
 
 ### 2. Memulai Record Terminalizer
 
-bikin nama folder record 
-
 contoh:
 
 ```
