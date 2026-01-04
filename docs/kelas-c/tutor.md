@@ -1,4 +1,4 @@
-**BUAT AKUN GITHUB**
+1. **BUAT AKUN GITHUB**
 
 # TUTORIAL MEMBUAT AKUN GITHUB
 
@@ -23,10 +23,10 @@ Tampilanya akan seperti ini
 pada tahapan ini anda telah selesai membuat akun github. silakan login menggunakan email/username dan password yang sudah di buat.
 
 2. **MASUK KE REPO DENGAN LINK YANG SUDAH DI BERIKAN DI TELEGRAM**
-2. **FORK REPOSITORY YANG DIKIRIM DI TELEGRAM**
-3. **UPLOAD FILE .YML dengan format nim_nama.yml** 
-4. **COMMIT**
-5. **KE PULL REQUEST**
-6. **NEW PULL RREQUEST**
-7. **CREATE PULL REQUEST**
-8. **ISI TITLE DENGAN NAMA MENGGUNAKAN HURUF KECIL**
+3. **FORK REPOSITORY YANG DIKIRIM DI TELEGRAM**
+4. **UPLOAD FILE .YML dengan format nim_nama.yml** 
+5. **COMMIT**
+6. **KE PULL REQUEST**
+7. **NEW PULL RREQUEST**
+9. **CREATE PULL REQUEST**
+10. **ISI TITLE DENGAN NAMA MENGGUNAKAN HURUF KECIL**
