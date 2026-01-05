@@ -1,0 +1,191 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/dimas
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 150
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 33
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 549
+    content: "bash: #: command not found\r\n"
+  - delay: 89
+    content: "\e]3008;start=aca49755-22e5-4391-9176-07eb4610d89f;machineid=ae04622d2bb442ccb0748d1ea9a6f664;user=root;hostname=sparow;bootid=6988e510-5c24-4bc7-adca-bae8971382a7;pid=10416;type=shell;cwd=/home/dimas\e\\\e]3008;end=370d8c79-2955-4fdc-ba29-54abab19a949;exit=success\e\\"
+  - delay: 6
+    content: "\e]3008;start=aca49755-22e5-4391-9176-07eb4610d89f;machineid=ae04622d2bb442ccb0748d1ea9a6f664;user=root;hostname=sparow;bootid=6988e510-5c24-4bc7-adca-bae8971382a7;pid=10416;type=shell;cwd=/home/dimas\e\\\e]0;root@sparow:/home/dimas\a\e[?2004h\e[38;5;196m(1)\e[0m \e[38;5;196mroot\e[0m \e[38;5;196m(\e[0m \e[38;5;196m13:16:39\e[0m \e[38;5;196m|\e[0m \e[38;5;196m/home/dimas\e[0m \e[38;5;196m)\r\r\n\e[0m \e[38;5;196m|-->\e[0m "
+  - delay: 1801
+    content: m
+  - delay: 262
+    content: 'y'
+  - delay: 127
+    content: s
+  - delay: 110
+    content: q
+  - delay: 193
+    content: l
+  - delay: 290
+    content: "\r\n\e[?2004l\r"
+  - delay: 14
+    content: "\e]3008;start=450d072e-4498-4fac-9956-86bc337a1288;machineid=ae04622d2bb442ccb0748d1ea9a6f664;user=root;hostname=sparow;bootid=6988e510-5c24-4bc7-adca-bae8971382a7;pid=10416;type=command;cwd=/home/dimas\e\\\e]3008;start=450d072e-4498-4fac-9956-86bc337a1288;machineid=ae04622d2bb442ccb0748d1ea9a6f664;user=root;hostname=sparow;bootid=6988e510-5c24-4bc7-adca-bae8971382a7;pid=10416;type=command;cwd=/home/dimas\e\\"
+  - delay: 5
+    content: "mysql: Deprecated program name. It will be removed in a future release, use '/usr/bin/mariadb' instead\r\n"
+  - delay: 44
+    content: "\e(B\e[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \\g.\r\n\e(B\e[m\e(B\e[0;1mYour MariaDB connection id is 23\r\nServer version: 12.1.2-MariaDB Arch Linux\r\n\r\n\e(B\e[m\e(B\e[0;1mCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.\r\n\r\n\e(B\e[m\e(B\e[0;1mType 'help;' or '\\h' for help. Type '\\c' to clear the current input statement.\r\n\r\n\e(B\e[m\e[?1034hMariaDB [(none)]> "
+  - delay: 5317
+    content: "CREATE DATABASE perpustakaan_mini;\r\n\e(B\e[0;1mQuery OK, 1 row affected (0.000 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [(none)]> USE perpustakaan_mini;"
+  - delay: 5740
+    content: "\r\n\e(B\e[0;1mDatabase changed\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 20131
+    content: "CREATE TABLE anggota (\r\n    ->     id_anggota INT AUTO_INCREMENT PRIMARY KEY,\r\n    ->     nama VARCHAR(100) NOT NULL,\r\n    ->     alamat VARCHAR(200),\r\n    ->     no_telp VARCHAR(20),\r\n    ->     email VARCHAR(100)\r\n    -> );"
+  - delay: 1112
+    content: "\r\n"
+  - delay: 21
+    content: "\e(B\e[0;1mQuery OK, 0 rows affected (0.020 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 7351
+    content: "CREATE TABLE buku (\r\n    ->     id_buku INT AUTO_INCREMENT PRIMARY KEY,\r\n    ->     judul VARCHAR(200) NOT NULL,\r\n    ->     pengarang VARCHAR(100),\r\n    ->     penerbit VARCHAR(100),\r\n    ->     tahun_terbit YEAR,\r\n    ->     stok INT DEFAULT 0\r\n    -> );"
+  - delay: 801
+    content: "\r\n"
+  - delay: 15
+    content: "\e(B\e[0;1mQuery OK, 0 rows affected (0.016 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 6672
+    content: "CREATE TABLE pinjaman (\r\n    ->     id_pinjaman INT AUTO_INCREMENT PRIMARY KEY,\r\n    ->     id_anggota INT,\r\n    ->     tgl_pinjam DATE,\r\n    ->     tgl_kembali DATE,\r\n    ->     FOREIGN KEY (id_anggota) REFERENCES anggota(id_anggota)\r\n    -> );\r\n"
+  - delay: 18
+    content: "\e(B\e[0;1mQuery OK, 0 rows affected (0.017 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> \r\nMariaDB [perpustakaan_mini]> CREATE TABLE detail_pinjam (\r\n    ->     id_detail INT AUTO_INCREMENT PRIMARY KEY,\r\n    ->     id_pinjaman INT,\r\n    ->     id_buku INT,\r\n    ->     jumlah INT DEFAULT 1,\r\n    ->     FOREIGN KEY (id_pinjaman) REFERENCES pinjaman(id_pinjaman),\r\n    ->     FOREIGN KEY (id_buku) REFERENCES buku(id_buku)\r\n    -> );"
+  - delay: 657
+    content: "\r\n"
+  - delay: 24
+    content: "\e(B\e[0;1mQuery OK, 0 rows affected (0.024 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 19290
+    content: "INSERT INTO anggota (nama, alamat, no_telp, email)\r\n    -> VALUES\r\n    -> ('Andi Wijaya', 'Jl. Melati 10', '08123456789', 'andi@mail.com'),\r\n    -> ('Siti Aminah', 'Jl. Mawar 5', '08234567890', 'siti@mail.com'),\r\n    -> ('Budi Santoso', 'Jl. Anggrek 12', '08345678901', 'budi@mail.com'),\r\n    -> ('Rina Kartika', 'Jl. Kenanga 7', '08456789012', 'rina@mail.com'),\r\n    -> ('Dewi Lestari', 'Jl. Cempaka 2', '08567890123', 'dewi@mail.com');"
+  - delay: 899
+    content: "\r\n"
+  - delay: 11
+    content: "\e(B\e[0;1mQuery OK, 5 rows affected (0.012 sec)\r\n\e(B\e[m\e(B\e[0;1mRecords: 5  Duplicates: 0  Warnings: 0\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 8475
+    content: "INSERT INTO buku (judul, pengarang, penerbit, tahun_terbit, stok)\r\n    -> VALUES\r\n    -> ('Database Fundamentals', 'R. Elmasri', 'Pearson', 2016, 5),\r\n    -> ('Pemrograman SQL', 'A. Nugroho', 'Informatika', 2020, 3),\r\n    -> ('Algoritma dan Struktur Data', 'H. Supriadi', 'Gramedia', 2018, 4),\r\n    -> ('Sistem Operasi', 'Silberschatz', 'McGraw-Hill', 2019, 6),\r\n    -> ('Jaringan Komputer', 'A. Tanenbaum', 'Prentice Hall', 2017, 2);"
+  - delay: 684
+    content: "\r\n"
+  - delay: 11
+    content: "\e(B\e[0;1mQuery OK, 5 rows affected (0.010 sec)\r\n\e(B\e[m\e(B\e[0;1mRecords: 5  Duplicates: 0  Warnings: 0\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 7294
+    content: "INSERT INTO pinjaman (id_anggota, tgl_pinjam, tgl_kembali)\r\n    -> VALUES\r\n    -> (1, '2025-09-01', '2025-09-10'),\r\n    -> (2, '2025-09-02', '2025-09-12'),\r\n    -> (3, '2025-09-05', '2025-09-15');"
+  - delay: 590
+    content: "\r\n"
+  - delay: 10
+    content: "\e(B\e[0;1mQuery OK, 3 rows affected (0.010 sec)\r\n\e(B\e[m\e(B\e[0;1mRecords: 3  Duplicates: 0  Warnings: 0\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 5625
+    content: "INSERT INTO detail_pinjam (id_pinjaman, id_buku, jumlah)\r\n    -> VALUES\r\n    -> (1, 1, 1),\r\n    -> (1, 2, 1),\r\n    -> (2, 3, 1),\r\n    -> (3, 4, 2);\r\n"
+  - delay: 9
+    content: "\e(B\e[0;1mQuery OK, 4 rows affected (0.009 sec)\r\n\e(B\e[m\e(B\e[0;1mRecords: 4  Duplicates: 0  Warnings: 0\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [perpustakaan_mini]> "
+  - delay: 24082
+    content: "\e(B\e[0;1mBye\r\n\e(B\e[m\e]3008;end=450d072e-4498-4fac-9956-86bc337a1288;exit=success\e\\"
+  - delay: 7
+    content: "\e]3008;start=aca49755-22e5-4391-9176-07eb4610d89f;machineid=ae04622d2bb442ccb0748d1ea9a6f664;user=root;hostname=sparow;bootid=6988e510-5c24-4bc7-adca-bae8971382a7;pid=10416;type=shell;cwd=/home/dimas\e\\\e]3008;end=eb0ad31f-2726-45e5-baf8-d0d7ab8ef4a9;exit=success\e\\"
+  - delay: 7
+    content: "\e]3008;start=aca49755-22e5-4391-9176-07eb4610d89f;machineid=ae04622d2bb442ccb0748d1ea9a6f664;user=root;hostname=sparow;bootid=6988e510-5c24-4bc7-adca-bae8971382a7;pid=10416;type=shell;cwd=/home/dimas\e\\\e]0;root@sparow:/home/dimas\a\e[?2004h\e[38;5;196m(2)\e[0m \e[38;5;196mroot\e[0m \e[38;5;196m(\e[0m \e[38;5;196m13:18:37\e[0m \e[38;5;196m|\e[0m \e[38;5;196m/home/dimas\e[0m \e[38;5;196m)\r\r\n\e[0m \e[38;5;196m|-->\e[0m "
+  - delay: 1636
+    content: "\e[?2004l\r\r\nlogout\r\n"
