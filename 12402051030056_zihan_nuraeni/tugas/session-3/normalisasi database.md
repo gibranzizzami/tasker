@@ -113,5 +113,5 @@ JOIN buku b ON p.id_buku = b.id_buku;
 
 
 > Foto penulis di seminar sebagai syarat absen 
-![absen](/session%203/img/buat%20absen.jpeg)
+![absen](https://github.com/zihannrae/tasker/blob/919cfd0c9cb211f3a0a6c68d66593a92e69517c5/12402051030056_zihan_nuraeni/tugas/session-3/img/buat%20absen.jpeg)
 
