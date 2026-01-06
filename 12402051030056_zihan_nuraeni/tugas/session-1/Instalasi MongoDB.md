@@ -20,4 +20,4 @@ Berikut adalah cara bagaimana mengunduh MOngoDB di LInux Mint:
 `mongosh`
 9. MongoDB selesai terunduh 
 
-![Tampilan selesai](/session%201/img/Mongoselesai.jpeg)
+![Tampilan selesai](https://github.com/zihannrae/tasker/blob/90ceae4af5e5aa929d1449c881b96f786518124a/12402051030056_zihan_nuraeni/tugas/session-1/img/Mongoselesai.jpeg)
