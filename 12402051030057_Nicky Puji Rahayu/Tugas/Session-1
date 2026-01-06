@@ -37,7 +37,7 @@ Langkah-langkah Install MariaDB di Linux Mint:
 
 Selesai. MariaDB siap digunakan.
 
-
+# Cara Install MongoDB
 1. Buka terminal.
 2. Perbarui daftar paket sistem dan upgrade:
    sudo apt update && sudo apt upgrade ‑y
