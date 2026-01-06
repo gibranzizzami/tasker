@@ -1,0 +1,10 @@
+
+# panduan instalasi Eprints 3.4.5 di ubuntu
+
+## update sistem
+update package list dan upgrade sistem 
+
+'sudo apt update'
+'sudo apt upgrade -y'
+
+
