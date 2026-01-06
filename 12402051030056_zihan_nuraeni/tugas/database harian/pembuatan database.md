@@ -31,7 +31,7 @@ masukkan data ke table seperti contoh di bawah:
 
 ```sql
 INSERT INTO buku (Judulm Penulis, Tahun_terbit, media, status) VALUES
-  ('The Picture of Dorian Gray', 'Oscar WIlde', 2021, 'Volume (perpustakaan), 'selesai);
+  ('The Picture of Dorian Gray', 'Oscar WIlde', 2021, 'Volume (perpustakaan), 'selesai');
 ```
 
 ## 4. Tampilkan Hasil Table
@@ -42,14 +42,10 @@ select from * buku;
 ```
 
 COntoh hasil:
-+---------+-------------------------------------------------+--------------------+--------------+-----------------------+---------+
-| id_Buku | Judul                                           | Penulis            | Tahun_Terbit | Media                 | Status  |
-+---------+-------------------------------------------------+--------------------+--------------+-----------------------+---------+
-|       1 | No Longer Human                                 | Osamu Dazai        |         1958 | Volume (Perpustakaan) | Selesai |
-|       2 | The Alchemist                                   | Paulo Coelho       |         1988 | Volume (Perpustakaan) | Selesai |
-|       3 | The Broken Ring: This Marriage Will Fail Anyway | CHOKAM, Cheong-gwa |         2021 | Manhwa                | Baca    |
-|       4 | The Picture of Dorian Gray                      | Oscar Wilde        |         2021 | Volume (Perpustakaan) | Selesai |
-|       5 | Ficciones                                       | Jorge Luis Borges  |         1993 | Volume (Perpustakaan) | Selesai |
-|       6 | WOrld War I & II                                | Dwi Adi WIcaksono  |         2024 | Volume (Perpustakaan) | Baca    |
-|       7 | Purple Hyacinth                                 | Ephmerys, Sophism  |         2019 | Komik (Webtoon)       | Baca    |
-+---------+-------------------------------------------------+--------------------+--------------+-----------------------+---------+
+
+| id_Buku | Judul | Peulis | Tahun_terbit | media | status |
+|--------------|---------|----------|--------|------------|
+| 1 | The Picture of Dorian Gray| Oscar WIlde | 2021| Volume (perpustakaan)| selesai |
+
+
+
