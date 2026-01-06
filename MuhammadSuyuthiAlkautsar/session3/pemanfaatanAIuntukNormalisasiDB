@@ -1,1 +1,185 @@
+# Pemanfaatan Artificial Intelligence (AI) untuk Normalisasi Database (1NF, 2NF, 3NF)
+## Proyek Mandiri – Kelas Database
+
+---
+
+## Pendahuluan
+
+Dalam proses belajar database secara mandiri, salah satu materi yang cukup menantang adalah **normalisasi database**. Konsep seperti First Normal Form (1NF), Second Normal Form (2NF), dan Third Normal Form (3NF) sering kali sulit dipahami jika hanya membaca teori tanpa contoh nyata.
+
+Melalui proyek mandiri ini, saya mencoba memanfaatkan **Artificial Intelligence (AI)** sebagai alat bantu untuk memahami dan menerapkan normalisasi database secara lebih praktis. AI digunakan bukan sebagai pengganti pemahaman konsep, tetapi sebagai asisten analisis yang membantu menjelaskan kesalahan struktur tabel dan memberikan saran perbaikan.
+
+Artikel ini mendokumentasikan langkah-langkah yang saya lakukan secara **step by step** dalam memanfaatkan AI untuk menormalisasi database hingga bentuk normal ketiga (3NF).
+
+---
+
+## Tujuan Proyek
+
+Tujuan dari proyek mandiri ini adalah:
+- Memahami konsep normalisasi database secara praktis
+- Menganalisis struktur tabel yang belum ternormalisasi
+- Menggunakan AI untuk membantu proses analisis dan perbaikan struktur database
+- Mendokumentasikan proses normalisasi sebagai bahan belajar dan referensi pribadi
+
+---
+
+## Konsep Singkat Normalisasi Database
+
+Normalisasi database adalah proses penyusunan struktur tabel agar:
+- Tidak terjadi pengulangan data yang tidak perlu
+- Data lebih konsisten
+- Perubahan data tidak menimbulkan anomali (insert, update, delete)
+
+Dalam proyek ini, normalisasi dilakukan hingga:
+- 1NF (First Normal Form)
+- 2NF (Second Normal Form)
+- 3NF (Third Normal Form)
+
+---
+
+## Peran AI dalam Proyek Ini
+
+Dalam proyek ini, AI saya gunakan untuk:
+- Mengevaluasi struktur tabel awal
+- Menunjukkan bagian tabel yang melanggar aturan normalisasi
+- Memberi saran pemecahan tabel
+- Menjelaskan alasan logis di balik setiap tahap normalisasi
+
+AI berfungsi sebagai partner diskusi dan alat bantu berpikir, terutama saat ragu menentukan ketergantungan data.
+
+---
+
+## Studi Kasus Awal: Tabel Belum Ternormalisasi
+
+Sebagai contoh awal, saya menggunakan tabel peminjaman buku perpustakaan berikut:
+
+TABEL_PEMINJAMAN
+
+id_peminjaman
+nama_anggota
+alamat_anggota
+judul_buku
+penulis_buku
+tanggal_pinjam
+tanggal_kembali
+
+
+Dari hasil analisis (dibantu AI), saya menemukan beberapa masalah:
+- Data anggota dan data buku digabung dalam satu tabel
+- Data anggota dan buku akan berulang setiap kali terjadi peminjaman
+- Perubahan alamat anggota atau data buku harus dilakukan di banyak baris
+
+Tabel ini menjadi titik awal normalisasi.
+
+---
+
+## Langkah 1: Normalisasi ke First Normal Form (1NF)
+
+### Prinsip 1NF
+Sebuah tabel dikatakan memenuhi 1NF jika:
+- Setiap kolom memiliki nilai atomik (tidak multivalue)
+- Tidak ada pengulangan data dalam satu kolom
+
+### Analisis
+Pada tabel awal, setiap kolom sudah berisi satu nilai (tidak ada data ganda dalam satu sel). Artinya, tabel ini **secara teknis sudah memenuhi 1NF**.
+
+Namun, meskipun sudah 1NF, tabel masih memiliki masalah redundansi.
+
+---
+
+## Langkah 2: Normalisasi ke Second Normal Form (2NF)
+
+### Prinsip 2NF
+Sebuah tabel memenuhi 2NF jika:
+- Sudah berada di 1NF
+- Setiap atribut non-key bergantung sepenuhnya pada primary key
+
+### Analisis
+Dari hasil diskusi dengan AI:
+- Data anggota (nama, alamat) tidak bergantung pada id_peminjaman
+- Data buku (judul, penulis) juga tidak sepenuhnya bergantung pada id_peminjaman
+
+### Pemecahan Tabel
+Untuk memenuhi 2NF, tabel dipecah menjadi:
+
+#### Tabel Anggota
+
+ANGGOTA
+
+id_anggota (PK)
+nama_anggota
+alamat_anggota
+
+
+#### Tabel Buku
+
+BUKU
+
+id_buku (PK)
+judul_buku
+penulis_buku
+
+
+#### Tabel Peminjaman
+
+PEMINJAMAN
+
+id_peminjaman (PK)
+id_anggota (FK)
+id_buku (FK)
+tanggal_pinjam
+tanggal_kembali
+
+
+Setelah pemecahan ini, ketergantungan parsial berhasil dihilangkan.
+
+---
+
+## Langkah 3: Normalisasi ke Third Normal Form (3NF)
+
+### Prinsip 3NF
+Sebuah tabel memenuhi 3NF jika:
+- Sudah berada di 2NF
+- Tidak ada ketergantungan transitif antar atribut non-key
+
+### Analisis
+Saya kembali meminta AI untuk mengecek:
+- Apakah ada kolom non-key yang bergantung pada kolom non-key lain
+
+Hasilnya:
+- Pada tabel ANGGOTA, semua kolom bergantung langsung pada id_anggota
+- Pada tabel BUKU, semua kolom bergantung langsung pada id_buku
+- Pada tabel PEMINJAMAN, semua kolom bergantung pada id_peminjaman
+
+Artinya, struktur tabel sudah memenuhi 3NF.
+
+---
+
+## Hasil Akhir Normalisasi
+
+Setelah melalui proses normalisasi dengan bantuan AI, struktur database menjadi:
+- Lebih terpisah dan terorganisir
+- Minim redundansi data
+- Lebih mudah dikembangkan dan dipelihara
+
+---
+
+## Refleksi Pribadi
+
+Melalui proyek mandiri ini, saya menyadari bahwa:
+- Normalisasi lebih mudah dipahami jika langsung diterapkan pada studi kasus nyata
+- AI sangat membantu dalam menjelaskan kesalahan logika yang sering luput dari perhatian
+- Pemahaman konsep tetap menjadi kunci, AI hanya berperan sebagai alat bantu
+
+Proyek ini menjadi pengalaman belajar yang efektif dalam memahami normalisasi database secara praktis.
+
+---
+
+## Penutup
+
+Pemanfaatan AI dalam pembelajaran database dapat menjadi pendekatan alternatif yang efektif, terutama bagi pembelajar mandiri. Dengan kombinasi pemahaman konsep dan bantuan AI, proses normalisasi database dapat dilakukan secara lebih sistematis dan mudah dipahami.
+
+Dokumentasi ini diharapkan dapat menjadi referensi belajar lanjutan dan dasar untuk pengembangan sistem database yang lebih kompleks.
+
+---
 
