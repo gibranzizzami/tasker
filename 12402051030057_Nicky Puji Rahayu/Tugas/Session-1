@@ -1,0 +1,104 @@
+# Cara Membuat Akun GitHub di Linux Mint
+
+1. Buka browser di Linux Mint dan akses https://github.com.
+
+2. Klik tombol Sign up di pojok kanan atas halaman./
+
+3. Isi pendaftaran dengan username, email, dan password. Klik Continue untuk melanjutkan.
+
+4. Lakukan verifikasi CAPTCHA sesuai instruksi yang muncul.
+
+5. Buka email yang didaftarkan, lalu klik tautan verifikasi dari GitHub.
+
+6. Atur preferensi pengguna (opsional), lalu lanjut ke dashboard GitHub.
+7. Akun GitHub berhasil dibuat dan siap digunakan.
+
+Langkah-langkah Install MariaDB di Linux Mint:
+
+1. Buka Terminal
+
+2. Update dan upgrade sistem:
+  sudo apt update && sudo apt upgrade -y
+
+3. Install MariaDB:
+ sudo apt install mariadb-server -y
+
+4. Cek status service MariaDB:
+ sudo systemctl status mariadb
+
+5. Jika belum aktif, jalankan:
+   sudo systemctl start mariadb
+
+6. Aktifkan MariaDB saat boot:
+   sudo systemctl enable mariadb
+
+7. Akses MariaDB:
+   sudo mariadB 
+
+Selesai. MariaDB siap digunakan.
+
+
+1. Buka terminal.
+2. Perbarui daftar paket sistem dan upgrade:
+   sudo apt update && sudo apt upgrade ‑y
+
+3. Import kunci publik (GPG key) MongoDB:
+   curl ‑fsSL https://www.mongodb.org/static/pgp/server‑8.0.asc | \
+   sudo gpg ‑o /usr/share/keyrings/mongodb-server‑8.0.gpg --dearmor
+
+4. Tambahkan repository resmi MongoDB untuk Ubuntu Noble:
+   echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server‑8.0.gpg ] \
+   https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | \
+   sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+
+5. Perbarui kembali daftar paket:
+   sudo apt update
+
+6. Instal MongoDB Community Edition:
+   sudo apt install ‑y mongodb-org
+   7. Instal MongoDB Community Edition:
+   sudo apt install ‑y mongodb-org
+
+7. Jalankan layanan MongoDB:
+   sudo systemctl start mongod
+
+8. Aktifkan agar layanan MongoDB otomatis berjalan saat boot:
+   sudo systemctl enable mongod
+
+9. Periksa status layanan untuk memastikan MongoDB berjalan dengan benar:
+    sudo systemctl status mongod
+
+10. Masuk ke shell MongoDB untuk pengujian:
+    mongosh dan MongoDB siap digunakan.
+
+  
+    # Cara Integrasi VSCode ke GitHub di Linux Mint 22
+
+1. Buka terminal, lalu pastikan Git telah terinstal dengan menjalankan perintah:
+   git --version
+
+2. Konfigurasi identitas Git
+
+3. Buat SSH key baru menggunakan perintah:
+   ssh-keygen -t  ed25519 -C "email"
+
+4. Aktifkan ssh-agent dan tambahkan SSH key:
+   eval "$(ssh-agent -s)"
+   ssh-add ~/.ssh/ id_ed25519
+
+5. Salin SSH key ke clipboard
+
+6. Buka situs https://github.com dan login ke akun GitHub
+
+7. Masuk ke menu Settings, SSH and GPG keys, lalu pilih New SSH key.
+
+8. Tempelkan SSH key yang telah disalin, beri nama sesuai keinginan, lalu klik Add SSH key.
+
+9. Buka VSCode. Di dalam VSCode, buka menu Terminal lalu pilih New Terminal.
+
+10. Jalankan perintah berikut untuk meng-clone repositori GitHub menggunakan SSH:
+    git clone git@github.com:username/ nama-repo.git
+
+11. Setelah proses clone selesai, buka folder repositori tersebut di VSCode.
+
+12. Repositori sudah siap digunakan untuk melakukan edit, commit, dan push ke GitHub menggunakan terminal atau fitur Source Control di dalam VSCode
