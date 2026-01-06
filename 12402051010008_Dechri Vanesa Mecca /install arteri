@@ -1,0 +1,3 @@
+sudo dpkg -i nama_file.deb, dan apabila muncul error dependency dapat diperbaiki dengan perintah sudo apt --fix-broken install -y. Sementara itu, jika file berformat .AppImage, 
+pengguna cukup memberikan izin eksekusi menggunakan perintah chmod +x nama_file.AppImage kemudian menjalankannya dengan ./nama_file.AppImage atau dengan double click. S
+setelah proses instalasi selesai, aplikasi kampus dapat dijalankan melalui menu aplikasi atau lewat terminal sesuai nama aplikasinya, dengan catatan sistem operasi yang digunakan sesuai dengan
