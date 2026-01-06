@@ -1,0 +1,22 @@
+Review Pertemuan 2
+Pada pertemuan kedua ini kita mulai mempelajari dasar-dasar dari MariaDB. Serta, cara menggunakan VScode dan GitHub
+
+Review Pertemuan 3
+Pada pertemuan ini terdapat cara-cara dalam membedakan baris dan kolom, mengetahui definisi tipe data dalam MariaDB. Lalu selanjutnya, membuat database untuk menyimpan data
+Modul database ini berisi langkah-langkah awal mulai dari login, dasar awal, opsi tambahan, hingga verifikasi. Penjelasannya sangat membantu kita semua dalam membuat database, namun menurut saya alangkah baiknya langkah-langkahnya dibuat berurutan, agar kita tidak mudah keliru.
+Setelah database berhasil dibuat, langkah selanjutnya membuat tabel sederhana.
+
+Review pertemuan 4
+Disini berisi langkah-langkah cara menambahkan data dengan INSERT, 
+terdapat pula tata cara mempelajari teknik multi-row dan langkah langsung dalam membuat perintah dasar.
+Kita juga bisa menampilkan isi tabel dengan memasukkan SELECT pada terminal, sehingga bisa menampilkan data dengan format yang lebih rapih. Serta, mengubah data dengan perintah UPDATE. 
+Selain untuk memperbarui data, kita juga dapat mengubah beberapa baris data dengan cepat.
+
+
+Pada modul ke-4 ini yaitu DELETE (menghapus data pada database), penting bagi kita untuk berhati-hati sebelum melakukan perintah ini. Sebab apabila baris data sudah dihapus, data tersebut tidak dapat dipulihkan kembali.
+Dan alangkah baiknya sebelum dilakukan penghapusan kita mulai dengan backup data terlebih dahulu, didelete ini kita bisa menghapus satu baris atau beberapa baris sekaligus.
+
+Review pertemuan 5
+Modul ini terdiri dari cara menampilkan kolom tertentu, mengajarkan cara menyaring data menggunakan clausa WHERE, serta menyeleksi data agar lebih akurat
+sesuai analisis kebutuhan kita. Kita bisa mengurutkan data dengan ORDER BY apabila ingin mengurutkan data secara menaik kita bisa menambahkan di akhir query yaitu SELECT. 
+apabila ingin menampilkan data secara menurun bisa tambahkan DESC diakhir query ORDER BY.
