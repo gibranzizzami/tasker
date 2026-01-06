@@ -1,0 +1,50 @@
+Nama :
+1. Kayla Shita Sabila
+2. Nicky Puji Rahayu
+Kelas : 3B
+
+Cara Install OJS
+# STEP 1: Update Sistem
+
+masuk ke root dan ketik : sudo apt update
+sudo apt upgrade -y
+
+
+# STEP 2: Install Dependencies
+Install paket yang dibutuhkan oleh OJS, seperti Apache web server, PHP
+sudo apt install apache2 libapache2-mod-php \
+php php-cli php-common php-mbstring php-gd php-intl php-xml \
+php-mysql php-zip php-curl php-tidy php-imagick php-bcmath \
+mariadb-server certbot python3-certbot-apache unzip wget -y
+
+# STEP 3: Buat Database untuk OJS
+sudo mariadb 
+CREATE DATABASE journal_KaylaNicky;
+GRANT ALL PRIVILEGES ON journal_KaylaNicky.* TO 'journal_KaylaNicky'@'localhost' IDENTIFIED BY 'YourStrongPassword';
+FLUSH PRIVILEGES;
+EXIT;
+
+# STEP 4: Download & Persiapkan OJS
+wget https://pkp.sfu.ca/ojs/download/ojs-3.3.0-21.tar.gz
+tar xzvf ojs-3.3.0-21.tar.gz
+sudo mkdir -p /var/www/journal.KaylaNicky.my.id/ojs-app
+sudo mv ojs-3.3.0-16 /var/www/journal.KaylaNicky.my.id/ojs-app
+sudo chown -R www-data:www-data /var/www/journal.KaylaNicky.my.id
+sudo chmod -R 755 /var/www/journal.KaylaNicky.my.id
+
+# STEP 5: Buat Virtual Host Apache
+sudo tee /etc/apache2/sites-available/journal.KaylaNicky.my.id.conf > /dev/null <<EOL
+<VirtualHost *:80>
+    ServerName journal.KaylaNicky.my.id
+    DocumentRoot /var/www/journal.KaylaNicky.my.id/ojs-app
+
+    <Directory /var/www/journal.KaylaNicky.my.id/ojs-app>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all graquire all granted
+    </Directory>
+    ErrorLog /var/log/apache2/journal.aminlabs.my.id_error.log
+    CustomLog /var/log/apache2/journal.aminlabs.my.id_access.log combined
+</VirtualHost>
+
+# Sumber : https://musaamin.web.id/cara-install-ojs33-ubuntu2204/
