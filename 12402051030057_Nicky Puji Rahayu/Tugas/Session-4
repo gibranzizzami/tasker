@@ -1,3 +1,6 @@
+# Membuat Database yang berguna sehari-hari
+
+
 /*M!999999\- enable the sandbox mode */ 
 -- MariaDB dump 10.19  Distrib 10.11.13-MariaDB, for debian-linux-gnu (x86_64)
 --
@@ -59,3 +62,76 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2025-10-12 21:28:36
+
+
+# Rangkuman Materi Database (Pertemuan 2–4)
+
+## Pertemuan 2 Pengantar
+  
+Mengenal konsep dasar data, database, DBMS, dan MariaDB.
+
+### 1. Perkenalan
+- Membahas definisi dan perbedaan antara data dan informasi.  
+- Memberikan contoh penerapan dalam kehidupan sehari-hari.  
+- Menjadi dasar sebelum mempelajari struktur tabel dan SQL.
+
+### 2. Data
+- Menjelaskan konsep data dan pentingnya dalam pengolahan informasi.  
+- Pemahaman pada jenis data dan perannya dalam penyimpanan.
+
+### 3. Database
+- Menjelaskan alasan mengapa database diperlukan  
+- Menyoroti manfaat database seperti:
+  - Keandalan  
+  - Keamanan  
+  - Multi-user  
+  - Konsistensi informasi  
+
+### 4. DBMS
+- Menguraikan perbedaan antara penyimpanan berbasis file dan sistem manajemen basis data (DBMS)
+- Menjelaskan keunggulan DBMS  
+
+### 5. MariaDB
+- Mengenalkan MariaDB sebagai sistem manajemen basis data relasional open-source.  
+- Menjelaskan sejarah singkat dan kompatibilitas dengan MySQL
+- Menyebutkan alasan mengapa MariaDB populer di kalangan pemula.
+
+### 6. Potensi
+- Membahas cara instalasi MariaDB di Windows dan Linux.  
+
+## Pertemuan 3 Struktur Database
+
+Memahami struktur database, tabel, baris, kolom, serta praktik membuatnya.
+
+### 1. Tabel
+- Menjelaskan perbedaan antara database dan tabel 
+- Menguraikan hubungan antara kolom dan baris dalam penyimpanan data.
+
+### 2. Tipe Data
+- Mempelajari tipe data dasar di MariaDB: angka, teks, dan tanggal
+- Memberikan panduan memilih tipe data yang tepat sesuai kebutuhan penyimpanan.
+
+### 3. Database
+- Latihan membuat database pertama menggunakan perintah
+  CREATE DATABASE.
+
+### 4. Tabel
+- Membuat tabel menggunakan CREATE TABLE dengan kolom sederhana.
+
+## Pertemuan 4 Mengisi dan Mengelola Data
+Belajar cara menampilkan, menambahkan, mengubah, dan menghapus data serta praktik mengisi tabel
+
+### 1. Insert
+- Cara menggunakan perintah INSERT untuk menambahkan data baru ke tabel.
+
+### 2. Select
+- Perintah Select untuk melihat semua isi tabel.
+
+### 3. Update
+- Mempelajari cara penggunaan perintah Update untuk mengubah isi data pada tabel.
+
+### 4. Delete
+- Mempelajari cara menghapus data dari tabel menggunakan DELETE.
+
+### 5. Praktik
+- Melakukan latihan menambhkan beberapa data buku ke dalam tabel.
