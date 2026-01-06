@@ -41,11 +41,6 @@ Gunakan command berikut untuk menampilkan hasil :
 select from * buku;
 ```
 
-COntoh hasil:
-
-| id_Buku | Judul | Peulis | Tahun_terbit | media | status |
-|--------------|---------|----------|--------|------------|
-| 1 | The Picture of Dorian Gray| Oscar WIlde | 2021| Volume (perpustakaan)| selesai |
 
 
 
