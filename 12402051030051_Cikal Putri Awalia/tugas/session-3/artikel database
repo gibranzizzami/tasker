@@ -1,0 +1,124 @@
+normalisasi_database_n1_n2_n3.md
+
+##PEMANFAATAN TEKNOLOGI UNTUK NORMALISASI DATABASE n1, n2, DAN n3
+
+1. PENDAHULUAN
+Dalam sistem data yang berasal dari berbagai sumber, sering muncul masalah seperti format berbeda, data ganda, dan struktur tabel yang tidak beraturan.  
+Normalisasi database dilakukan untuk menata kembali data agar lebih efisien, konsisten, dan mudah digunakan. Proses ini membantu memastikan setiap data tersimpan dengan benar dan saling terhubung antar tabel.
+
+---
+
+2. TUJUAN
+1. Menggabungkan data dari tiga sumber (n1, n2, dan n3).  
+2. Menyamakan format penulisan dan struktur kolom.  
+3. Menghapus data duplikat dan kesalahan input.  
+4. Meningkatkan akurasi serta efisiensi sistem penyimpanan data.
+
+3. LANGKAH-LANGKAH PELAKSANAAN
+
+3.1 Mengumpulkan Data Awal
+Kumpulkan ketiga sumber data (n1, n2, n3) dan pastikan bisa diakses.
+
+**SQL:**
+```sql
+SELECT * FROM n1 LIMIT 10;
+SELECT * FROM n2 LIMIT 10;
+SELECT * FROM n3 LIMIT 10;
+
+3.2 Menganalisis Kondisi Data
+
+Periksa kolom, jumlah data kosong, dan tipe data.
+import pandas as pd
+
+n1 = pd.read_csv('n1.csv')
+n2 = pd.read_csv('n2.csv')
+n3 = pd.read_csv('n3.csv')
+
+print(n1.info())
+print(n2.isnull().sum())
+print(n3.describe())
+
+3.3 Membuat Struktur Database Utama
+
+Rancang tabel yang akan digunakan untuk menyimpan hasil penggabungan.
+CREATE TABLE pengguna (
+  id_pengguna INT PRIMARY KEY,
+  nama VARCHAR(100),
+  email VARCHAR(100),
+  telepon VARCHAR(20)
+);
+
+CREATE TABLE produk (
+  id_produk INT PRIMARY KEY,
+  nama_produk VARCHAR(100),
+  kategori VARCHAR(50)
+);
+
+CREATE TABLE transaksi (
+  id_transaksi INT PRIMARY KEY,
+  id_pengguna INT,
+  id_produk INT,
+  tanggal DATE,
+  FOREIGN KEY (id_pengguna) REFERENCES pengguna(id_pengguna),
+  FOREIGN KEY (id_produk) REFERENCES produk(id_produk)
+);
+
+3.4 Menyamakan Format Data
+
+Samakan format penulisannya agar data seragam.
+n1['nama'] = n1['nama'].str.title().str.strip()
+n3['tanggal'] = pd.to_datetime(n3['tanggal'], errors='coerce')
+
+UPDATE n1 SET nama = INITCAP(TRIM(nama));
+UPDATE n3 SET tanggal = STR_TO_DATE(tanggal, '%d/%m/%Y');
+
+3.5 Menghapus Data Ganda
+
+Hapus duplikat berdasarkan kolom kunci seperti email atau ID.
+SELECT nama, COUNT(*) 
+FROM n1 
+GROUP BY nama 
+HAVING COUNT(*) > 1;
+
+n1 = n1.drop_duplicates(subset=['email'])
+
+3.6 Menggabungkan Data
+
+Gabungkan semua sumber ke dalam satu tabel akhir.
+merged = pd.merge(n1, n3, on='id_pengguna', how='left')
+final = pd.merge(merged, n2, on='id_produk', how='left')
+final.to_csv('hasil_normalisasi.csv', index=False)
+
+CREATE TABLE data_final AS
+SELECT n1.id_pengguna, n1.nama, n2.nama_produk, n3.tanggal
+FROM n1
+JOIN n3 ON n1.id_pengguna = n3.id_pengguna
+JOIN n2 ON n3.id_produk = n2.id_produk;
+
+3.7 Menerapkan Normalisasi (1NF–3NF)
+
+Pastikan setiap tabel memenuhi prinsip normalisasi:
+
+1NF: Kolom berisi satu nilai tunggal.
+
+2NF: Kolom non-kunci bergantung pada kunci utama.
+
+3NF: Tidak ada kolom non-kunci yang saling bergantung.
+ALTER TABLE transaksi DROP COLUMN nama_pengguna;
+
+3.8 Mengecek Hasil Akhir
+Periksa kembali hasil akhir apakah sudah bersih dan lengkap.
+print(final.isnull().sum())
+SELECT COUNT(*) FROM data_final;
+SELECT * FROM data_final WHERE nama IS NULL;
+
+4. PENUTUP
+
+Proses normalisasi database berguna untuk membantu dalam mengatur ulang data agar lebih rapih dan mudah dikelola. Dengan adanya langkah-langkah di atas, data dari berbagai sumber (n1, n2, n3) dapat digabung menjadi satu sistem yang tertata dan kosisten. Database pun menjadi efisien, bebas duplikasi, serta siap dipakai untuk sistem informasi lainnya.
+
+Absensi:
+![database](/img/absensi.jpeg)
+
+Sumber:
+ChatGPT
+Gemini
