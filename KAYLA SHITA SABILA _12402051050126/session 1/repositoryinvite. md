@@ -1,0 +1,12 @@
+Membuat Repository di GitHub dan Invite
+Login ke GitHub.
+Klik tombol New Repository.
+masukkan:
+Repository name
+Deskripsi (opsional)
+Pilih Public/Private
+Centang “Add a README file” (opsional).
+Klik Create repository.
+Untuk mengundang dosen:
+Masuk ke repo → klik Settings → Collaborators.
+Tambahkan username:almuhdilkarim

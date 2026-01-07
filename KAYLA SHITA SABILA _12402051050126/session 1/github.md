@@ -1,0 +1,9 @@
+Membuat Akun GitHub
+ Buka https://github.com.
+Klik Sign up.
+Masukkan:
+ Username
+ Email
+Password
+Verifikasi email.
+Login menggunakan akun yang baru dibuat. 

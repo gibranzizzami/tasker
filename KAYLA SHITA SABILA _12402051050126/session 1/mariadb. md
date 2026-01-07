@@ -1,0 +1,10 @@
+intalasi maria db 
+Pertama, lakukan pembaruan sistem dengan perintah sudo apt update && sudo apt upgrade -y. Tujuannya agar semua paket berada dalam kondisi terbaru sehingga instalasi MariaDB dapat berjalan tanpa hambatan.
+
+Kedua, instal MariaDB dengan perintah sudo apt install mariadb-server -y. Perintah ini akan mengunduh dan memasang MariaDB beserta dependensinya secara otomatis.
+
+Ketiga, setelah instalasi selesai, jalankan layanan MariaDB menggunakan sudo systemctl start mariadb. Dengan langkah ini, server database akan aktif dan siap digunakan.
+
+Keempat, agar MariaDB selalu berjalan otomatis setiap kali sistem dinyalakan, gunakan perintah sudo systemctl enable mariadb. Hal ini memudahkan pengguna karena tidak perlu menyalakan layanan MariaDB secara manual.
+
+Kelima, pastikan layanan MariaDB sudah aktif dengan memeriksa statusnya menggunakan sudo systemctl status mariadb. Jika status menampilkan “active (running)”, berarti instalasi berhasil.
