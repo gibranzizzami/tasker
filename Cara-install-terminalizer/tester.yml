@@ -1,0 +1,389 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/rehan
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 80
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 24
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 3592
+    content: "\e]0;rehan@thinkpad-x260:~\e\\"
+  - delay: 5
+    content: "\e]7;file://thinkpad-x260/home/rehan\e\\\e[?2004h\e]0;rehan@thinkpad-x260: ~\a\e[01;32mrehan@thinkpad-x260\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 1569
+    content: s
+  - delay: 115
+    content: u
+  - delay: 1832
+    content: d
+  - delay: 99
+    content: o
+  - delay: 523
+    content: ' '
+  - delay: 191
+    content: s
+  - delay: 88
+    content: u
+  - delay: 557
+    content: "\r\n\e[?2004l\r"
+  - delay: 52
+    content: '[sudo] password for rehan: '
+  - delay: 1004
+    content: "\r\n"
+  - delay: 438
+    content: "\e[?2004h\e]0;root@thinkpad-x260: /home/rehan\aroot@thinkpad-x260:/home/rehan# "
+  - delay: 1337
+    content: exit
+  - delay: 169
+    content: "\b\b\b\bterminalizer record demo"
+  - delay: 466
+    content: "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\bclear\e[K"
+  - delay: 452
+    content: "\b\b\b\b\bmysql -u root -p"
+  - delay: 1570
+    content: "\r\n\e[?2004l\r"
+  - delay: 34
+    content: 'Enter password: '
+  - delay: 3332
+    content: "\r\n"
+  - delay: 38
+    content: "\e(B\e[0;1mWelcome to the MariaDB monitor.  Commands end with ; or \\g.\r\n"
+  - delay: 7
+    content: "\e(B\e[m\e(B\e[0;1mYour MariaDB connection id is 6\r\nServer version: 10.6.22-MariaDB-0ubuntu0.22.04.1 Ubuntu 22.04\r\n\r\n\e(B\e[m\e(B\e[0;1mCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.\r\n\r\n\e(B\e[m\e(B\e[0;1mType 'help;' or '\\h' for help. Type '\\c' to clear the current input statement.\r\n\r\n\e(B\e[mMariaDB [(none)]> "
+  - delay: 2111
+    content: s
+  - delay: 136
+    content: h
+  - delay: 271
+    content: o
+  - delay: 137
+    content: w
+  - delay: 491
+    content: ' '
+  - delay: 100
+    content: d
+  - delay: 230
+    content: a
+  - delay: 162
+    content: t
+  - delay: 110
+    content: a
+  - delay: 135
+    content: b
+  - delay: 123
+    content: a
+  - delay: 183
+    content: s
+  - delay: 168
+    content: e
+  - delay: 183
+    content: s
+  - delay: 208
+    content: ;
+  - delay: 471
+    content: "\r\n"
+  - delay: 11
+    content: "+--------------------+\r\n| Database           |\r\n+--------------------+\r\n| Eprints1           |\r\n| information_schema |\r\n| mysql              |\r\n| performance_schema |\r\n| punyarehan         |\r\n| sys                |\r\n| tester_uas         |\r\n+--------------------+\r\n\e(B\e[0;1m7 rows in set (0,008 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [(none)]> "
+  - delay: 1359
+    content: u
+  - delay: 101
+    content: s
+  - delay: 178
+    content: e
+  - delay: 3128
+    content: "\r\e[21G\e[K"
+  - delay: 167
+    content: "\r\e[20G\e[K"
+  - delay: 124
+    content: "\r\e[19G\e[K"
+  - delay: 987
+    content: u
+  - delay: 152
+    content: s
+  - delay: 220
+    content: e
+  - delay: 837
+    content: "\r\e[21G\e[K"
+  - delay: 182
+    content: "\r\e[20G\e[K"
+  - delay: 416
+    content: "\r\e[19G\e[K"
+  - delay: 355
+    content: U
+  - delay: 304
+    content: S
+  - delay: 155
+    content: E
+  - delay: 802
+    content: ' '
+  - delay: 456
+    content: t
+  - delay: 165
+    content: e
+  - delay: 210
+    content: s
+  - delay: 268
+    content: t
+  - delay: 130
+    content: e
+  - delay: 138
+    content: r
+  - delay: 910
+    content: _
+  - delay: 585
+    content: u
+  - delay: 120
+    content: a
+  - delay: 214
+    content: s
+  - delay: 758
+    content: ;
+  - delay: 646
+    content: "\r\n"
+  - delay: 17
+    content: "Reading table information for completion of table and column names\r\nYou can turn off this feature to get a quicker startup with -A\r\n\r\n\e(B\e[0;1mDatabase changed\r\n\e(B\e[mMariaDB [tester_uas]> "
+  - delay: 3379
+    content: d
+  - delay: 256
+    content: e
+  - delay: 255
+    content: s
+  - delay: 763
+    content: c
+  - delay: 1333
+    content: "\r\e[26G\e[K"
+  - delay: 175
+    content: "\r\e[25G\e[K"
+  - delay: 148
+    content: "\r\e[24G\e[K"
+  - delay: 231
+    content: "\r\e[23G\e[K"
+  - delay: 2042
+    content: s
+  - delay: 127
+    content: h
+  - delay: 200
+    content: o
+  - delay: 154
+    content: w
+  - delay: 653
+    content: ' '
+  - delay: 278
+    content: t
+  - delay: 149
+    content: a
+  - delay: 170
+    content: b
+  - delay: 359
+    content: l
+  - delay: 92
+    content: e
+  - delay: 201
+    content: s
+  - delay: 577
+    content: ;
+  - delay: 861
+    content: "\r\n+----------------------+\r\n| Tables_in_tester_uas |\r\n+----------------------+\r\n| warung               |\r\n+----------------------+\r\n\e(B\e[0;1m1 row in set (0,001 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [tester_uas]> "
+  - delay: 2265
+    content: d
+  - delay: 189
+    content: e
+  - delay: 230
+    content: s
+  - delay: 156
+    content: c
+  - delay: 917
+    content: ' '
+  - delay: 409
+    content: w
+  - delay: 205
+    content: a
+  - delay: 293
+    content: r
+  - delay: 144
+    content: u
+  - delay: 228
+    content: 'n'
+  - delay: 222
+    content: g
+  - delay: 588
+    content: ;
+  - delay: 668
+    content: "\r\n+----------------+--------------+------+-----+---------+----------------+\r\n| Field          | Type         | Null | Key | Default | Extra          |\r\n+----------------+--------------+------+-----+---------+----------------+\r\n| id_warung      | int(11)      | NO   | PRI | NULL    | auto_increment |\r\n| nama_warung    | varchar(100) | YES  |     | NULL    |                |\r\n| pemilik_warung | varchar(100) | YES  |     | NULL    |                |\r\n| alamat_warung  | varchar(100) | YES  |     | NULL    |                |\r\n| no_telepon     | varchar(20)  | YES  |     | NULL    |                |\r\n+----------------+--------------+------+-----+---------+----------------+\r\n\e(B\e[0;1m5 rows in set (0,003 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [tester_uas]> "
+  - delay: 4851
+    content: s
+  - delay: 161
+    content: e
+  - delay: 182
+    content: l
+  - delay: 85
+    content: e
+  - delay: 255
+    content: c
+  - delay: 774
+    content: t
+  - delay: 867
+    content: ' '
+  - delay: 1369
+    content: '*'
+  - delay: 565
+    content: ' '
+  - delay: 248
+    content: f
+  - delay: 216
+    content: r
+  - delay: 130
+    content: o
+  - delay: 192
+    content: m
+  - delay: 467
+    content: ' '
+  - delay: 173
+    content: w
+  - delay: 209
+    content: a
+  - delay: 283
+    content: r
+  - delay: 157
+    content: u
+  - delay: 213
+    content: 'n'
+  - delay: 216
+    content: g
+  - delay: 551
+    content: ;
+  - delay: 510
+    content: "\r\n"
+  - delay: 7
+    content: "+-----------+-------------+----------------+-----------------------+--------------+\r\n| id_warung | nama_warung | pemilik_warung | alamat_warung         | no_telepon   |\r\n+-----------+-------------+----------------+-----------------------+--------------+\r\n|         1 | toko_budi   | budiono        | jalan subur jaya no.4 | 082727369277 |\r\n|         2 | sukmul jaya | mulyono        | jalan tretan no.62A   | 081234567896 |\r\n+-----------+-------------+----------------+-----------------------+--------------+\r\n\e(B\e[0;1m2 rows in set (0,009 sec)\r\n\e(B\e[m\e(B\e[0;1m\r\n\e(B\e[mMariaDB [tester_uas]> "
+  - delay: 2170
+    content: e
+  - delay: 300
+    content: x
+  - delay: 163
+    content: i
+  - delay: 177
+    content: t
+  - delay: 559
+    content: "\r\n\e(B\e[0;1mBye\r\n\e(B\e[m\e[?2004h\e]0;root@thinkpad-x260: /home/rehan\aroot@thinkpad-x260:/home/rehan# "
+  - delay: 2113
+    content: e
+  - delay: 245
+    content: x
+  - delay: 412
+    content: i
+  - delay: 159
+    content: t
+  - delay: 570
+    content: "\r\n\e[?2004l\rexit\r\n"
+  - delay: 30
+    content: "\e]0;rehan@thinkpad-x260:~\e\\"
+  - delay: 18
+    content: "\e]7;file://thinkpad-x260/home/rehan\e\\\e[?2004h\e]0;rehan@thinkpad-x260: ~\a\e[01;32mrehan@thinkpad-x260\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 2061
+    content: "\e[?2004l\r\r\nlogout\r\n"
